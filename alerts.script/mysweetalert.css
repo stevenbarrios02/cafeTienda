@@ -1,0 +1,122 @@
+.mysweetalert-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+.mysweetalert-overlay.show { opacity: 1; }
+
+.mysweetalert-modal {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.mysweetalert-modal.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.mysweetalert-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: pop 0.4s ease;
+}
+
+.mysweetalert-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.mysweetalert-buttons button {
+    padding: 10px 20px;
+    background: #ff6600;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.mysweetalert-buttons button:hover {
+    background: #e65c00;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* Colores por tipo */
+.msa-success .msa-icon { color: #4caf50; }
+.msa-error .msa-icon { color: #f44336; }
+.msa-warning .msa-icon { color: #ff9800; }
+.msa-info .msa-icon { color: #2196f3; }
+
+/* Título */
+.msa-modal h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Mensaje */
+.msa-modal p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Imagen personalizada */
+.msa-image {
+    max-width: 100px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Botones */
+.msa-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.msa-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.msa-confirm {
+    background: #4caf50;
+    color: #fff;
+}
+
+.msa-confirm:hover {
+    background: #43a047;
+}
+
+.msa-cancel {
+    background: #f44336;
+    color: #fff;
+}
+
+.msa-cancel:hover {
+    background: #e53935;
+}
+
+
